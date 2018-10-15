@@ -1,0 +1,25 @@
+#mz_menu{ width: 265px; height: 100%; background: #282828; color:#999999; position: fixed; left: 0; top:50px; display: block; z-index:10;}
+#mz_menu ul{}
+#mz_menu li{ line-height: 50px; height: 50px; border-bottom: 1px dashed #333333; padding-left: 10px; }
+#mz_menu li i{ float:right; padding-right: 10px; }
+#mz_menu li a{ color:inherit; text-decoration: none; display: block; width:100%; height:100%; }
+
+.navFade-enter {
+	opacity : 0;
+	transform : translateX(-100%);
+}
+.navFade-enter.navFade-enter-active {
+	opacity : 1;
+	transform : translateX(0);
+	transition : .5s linear;
+}
+.navFade-leave {
+	opacity : 1;
+	transform : translateX(0);
+}
+.navFade-leave.navFade-leave-active {
+	opacity : 0;
+	transform : translateX(-100%);
+	transition : .5s linear;
+}
+
