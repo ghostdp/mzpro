@@ -26,7 +26,7 @@ class App extends Component {
 	          <Switch>
 		          <Route path="/home" component={ Home } />
 		          <Route path="/film" component={ Film } />
-		          <Route path="/detail" component={ Detail } />
+		          <Route path="/detail/:mid" component={ Detail } />
 		          <Redirect from="/*" to="/home" />
 	          </Switch>
 	      </Fragment>

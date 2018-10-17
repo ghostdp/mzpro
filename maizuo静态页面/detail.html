@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<style>
+	*{ margin:0; padding:0; }
+	html,body{ height: 100%; font-size:14px; background: #ebebeb; }
+	li{ list-style:none; }
+	img{ display:block; }
+
+	#mz_head{ width:100%; height:50px; background:#282828; position: fixed; left: 0; top: 0; display: flex; line-height: 50px; color:#999999; text-align: center; z-index:10;}
+	#mz_head .menu{ width: 50px; height: 50px; border-right: #333333 solid 1px; }
+	#mz_head .menu i{ font-size:26px; }
+	#mz_head .title{ flex:1; color:white; padding-left: 15px; text-align: left;}
+	#mz_head .city{ width:80px; }
+	#mz_head .user{ width:50px; }
+
+	#mz_menu{ width: 265px; height: 100%; background: #282828; color:#999999; position: fixed; left: 0; top:50px; display: none; z-index:10;}
+	#mz_menu ul{}
+	#mz_menu li{ line-height: 50px; height: 50px; border-bottom: 1px dashed #333333; padding-left: 10px; }
+	#mz_menu li i{ float:right; padding-right: 10px; }
+
+	#mz_detail{ margin-top:50px; }
+	#mz_detail .banner{ width: 100%; }
+	#mz_detail .banner img{ width: 100%; }
+	#mz_detail .info{ margin-top: 16px; font-size: 12px; }
+	#mz_detail .info h2{ height: 24px; line-height: 24px; border-left:16px #e4c89c solid; font-size: 16px; padding-left: 4px; font-weight: 100; }
+	#mz_detail .info dl{ overflow: hidden; line-height: 27px; margin-top: 10px; padding:0 10px; box-sizing:border-box; display: flex; }
+	#mz_detail .info dt{ width:80px; }
+	#mz_detail .info dd{ flex:1; overflow:hidden; white-space: nowrap; text-overflow:ellipsis;}
+	#mz_detail .info p{ padding:0 10px; box-sizing:border-box; line-height: 20px; margin-top: 10px; }
+	
+	</style>
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<link rel="stylesheet" href="lib/swiper-4.1.0.min.css">
+	<script src="lib/zepto.js"></script>
+	<script src="lib/swiper-4.1.0.min.js"></script>
+</head>
+<body>
+	<div id="mz_head">
+		<div class="menu"><i class="iconfont icon-category"></i></div>
+		<div class="title">神秘巨星</div>
+		<div class="city">哈尔滨 <i class="iconfont icon-moreunfold"></i></div>
+		<div class="user"><i class="iconfont icon-account"></i></div>
+	</div>
+
+	<div id="mz_menu">
+		<ul>
+			<li>首页<i class="iconfont icon-moreunfold"></i></li>
+			<li>影片<i class="iconfont icon-moreunfold"></i></li>
+			<li>影院<i class="iconfont icon-moreunfold"></i></li>
+			<li>商城<i class="iconfont icon-moreunfold"></i></li>
+			<li>我的<i class="iconfont icon-moreunfold"></i></li>
+			<li>卖座卡<i class="iconfont icon-moreunfold"></i></li>
+		</ul>
+	</div>
+
+	<div id="mz_detail">
+		<div class="banner"><img src="images/4.jpg"></div>
+		<div class="info">
+			<h2>影片简介</h2>
+			<dl>
+				<dt>导&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp演：</dt>
+				<dd>阿瓦提·钱德安</dd>
+			</dl>
+			<dl>
+				<dt>主&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp演：</dt>
+				<dd>阿米尔·汗 | 泽伊拉·沃西姆 | 梅·维贾 | 拉杰·阿晶 | 法鲁克·贾法尔</dd>
+			</dl>
+			<dl>
+				<dt>地区语言：</dt>
+				<dd>印度(印地语 英语)</dd>
+			</dl>
+			<dl>
+				<dt>类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型：</dt>
+				<dd>剧情|音乐</dd>
+			</dl>
+			<dl>
+				<dt>上映日期：</dt>
+				<dd>1月19日上映</dd>
+			</dl>
+			<p>出生在小城镇穆斯林家庭的尹希娅一直有一个梦想：成为全世界最优秀的歌手，可却遭到家暴成性的父亲百般阻挠。懦弱的母亲除了背着父亲悄悄满足尹希娅许多小需求以外，并没有办法实质性的改善她的生活，没有勇气离婚带她离开这个女人不受尊重的地方，更没有勇气支持她的梦想。追梦心切的尹希娅在视频网站上，以“神秘巨星”为名，穿上罩袍上传自己的唱歌视频，不仅被观众喜欢，那些政客、明星、音乐导演也纷纷转发她的视频，甚至音乐导演夏克提•库马尔也向尹希娅抛出了橄榄枝。在夏克提和好朋友钦腾的帮助下，尹希娅开始一步步向梦想靠近…</p>
+		</div>
+	</div>
+
+	<script>
+
+	var $mz_head = $('#mz_head');
+	var $mz_head_menu = $mz_head.find('.menu');
+	var $mz_menu = $('#mz_menu');
+
+	$mz_head_menu.on('tap',function(){
+		$mz_menu.toggle();
+	});
+
+
+	</script>	
+</body>
+</html>
