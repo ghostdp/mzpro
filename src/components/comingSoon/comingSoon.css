@@ -1,0 +1,9 @@
+.comingSoonFade-appear {
+  opacity: 0;
+}
+
+.comingSoonFade-appear.comingSoonFade-appear-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+

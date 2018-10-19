@@ -1,0 +1,8 @@
+.nowPlayingFade-appear {
+  opacity: 0;
+}
+
+.nowPlayingFade-appear.nowPlayingFade-appear-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}

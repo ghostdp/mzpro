@@ -3,4 +3,5 @@
 #mz_head .menu i{ font-size:26px; }
 #mz_head .title{ flex:1; color:white; padding-left: 15px; text-align: left;}
 #mz_head .city{ width:80px; }
+#mz_head .city a{ color:inherit; text-decoration: none;}
 #mz_head .user{ width:50px; }

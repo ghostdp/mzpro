@@ -10,6 +10,7 @@ import {
 import Home from './components/home/home.js';
 import Film from './components/film/film.js';
 import Detail from './components/detail/detail.js';
+import City from './components/city/city.js';
 import Header from './components/header/header.js';
 import Nav from './components/nav/nav.js';
 
@@ -27,6 +28,7 @@ class App extends Component {
 		          <Route path="/home" component={ Home } />
 		          <Route path="/film" component={ Film } />
 		          <Route path="/detail/:mid" component={ Detail } />
+		          <Route path="/city" component={ City } />
 		          <Redirect from="/*" to="/home" />
 	          </Switch>
 	      </Fragment>

@@ -58,12 +58,15 @@ class Movie extends Component {
 		}
 		else{
 			//编程式路由
+			//this.props.history.push('/detail/' + mid + '?username=xiaoming');
+			//this.props.history.push('/detail/' + mid , { username : 'xiaoming' });
 			this.props.history.push('/detail/' + mid);
 		}
 	}
 	handleTouchMove(){
 		this.isMove = true;
 	}
+
 }
 
 export default withRouter(Movie);

@@ -37,7 +37,9 @@ class Banner extends Component {
 					pagination: {
 				      	el: '#mz_pagination'
 				    },
-				    autoplay : true
+				    autoplay : {
+				    	disableOnInteraction : false
+				    }
 				});
 
 			}

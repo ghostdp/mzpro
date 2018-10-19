@@ -1,8 +1,9 @@
 import React , { Component } from 'react';
 import './detail.css';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
-class Detail extends Component {
+class DetailUI extends Component {
 	constructor(){
 		super();
 		this.state = {
@@ -11,7 +12,7 @@ class Detail extends Component {
 	}
 	render(){
 		
-		var { cover , director , language , category , premiereAt , synopsis , actors } = this.state.detailData;
+		var { cover , director , language , category , synopsis , actors } = this.state.detailData;
 
 		return (
 			<div id="mz_detail">
@@ -47,7 +48,7 @@ class Detail extends Component {
 					</dl>
 					<dl>
 						<dt>上映日期：</dt>
-						<dd>{ premiereAt }</dd>
+						<dd>{ this.premiereAtMethod() }</dd>
 					</dl>
 					<p>{ synopsis }</p>
 				</div>
@@ -62,9 +63,34 @@ class Detail extends Component {
 				this.setState({
 					detailData : film
 				});
+				this.props.movieTitleDis( film.name );
 			}
 		});
 	}
+	premiereAtMethod(){
+		var premiereAt = this.state.detailData.premiereAt;
+		if(premiereAt){
+			var date = new Date();
+			date.setTime(premiereAt);
+			return (date.getMonth() + 1) + '月' + date.getDate() + '日上映';
+		}
+		else{
+			return '';
+		}
+	}
 }
+
+function mapStateToProps(state){
+	return {};
+}
+function mapDispatchToProps(dispatch){
+	return {
+		movieTitleDis(movieTitle){
+			dispatch({ type : 'CHANGE_MOVIETITLE' , payload : movieTitle });
+		}
+	};
+}
+
+var Detail = connect(mapStateToProps , mapDispatchToProps)(DetailUI);
 
 export default Detail;

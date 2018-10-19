@@ -1,0 +1,4 @@
+#city{ margin-top: 50px;}
+#city .cityIndex{}
+#city .cityIndex li{ float: left; width:25%; height: 50px; line-height: 50px; text-align: center; border-bottom:1px solid #ccc;}
+#city .cityList{ clear:both;}
